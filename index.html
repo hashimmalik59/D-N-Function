@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day and Night Function</title>
+  </head>
+  <style>
+    body{
+      display: flex;
+      text-align: center;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+    button{
+      height: 10vh;
+      width: 10%;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      font-size: 1.25em;
+      transition: all .20s ease-in-out;
+    }
+    .sun-button{
+      background-color: #F0C42C;
+    }
+    .sun-button:hover{
+      box-shadow: 0px 0px 10px #F0C42C;
+      text-shadow: 0px 0px 10px #F0C42C;
+    }
+    .moon-button{
+      background-color: #82818D;
+    }
+    .moon-button:hover{
+      box-shadow: 0px 0px 10px #82818D;
+      text-shadow: 0px 0px 10px #82818D;
+    }
+  </style>
+  <body>
+
+    <button class="sun-button" onclick="day()">Sun</button>
+    <img src="Sun Icon.png" alt="Sun Icon" width="30%" class="sun">
+    <img src="Moon Icon.png" alt="Moon Icon" width="30%" class="moon">
+    <button class="moon-button" onclick="night()">Moon</button>
+
+    <script>
+      document.querySelector('.moon').style.display = 'none'
+      
+      function day(){
+        document.querySelector('.sun').style.display = 'block'
+        document.querySelector('.moon').style.display = 'none'
+        document.querySelector('body').style.backgroundColor = 'white'
+      }
+      function night(){
+        document.querySelector('.moon').style.display = 'block'
+        document.querySelector('.sun').style.display = 'none'
+        document.querySelector('body').style.backgroundColor = 'black'
+      }
+    </script>
+  </body>
+</html>
